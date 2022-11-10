@@ -1,0 +1,10 @@
+project(LRU_test)
+
+set(EXE_SOURCES
+	test.cpp
+)
+
+add_executable(LRU_test ${EXE_SOURCES})
+
+target_link_libraries(LRU_test PRIVATE LRU_lib)
+# set_target_properties(sum_test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})

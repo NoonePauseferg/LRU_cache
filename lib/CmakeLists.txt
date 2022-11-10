@@ -1,0 +1,9 @@
+project(LRU_library)
+
+set(LIB_SOURCES
+    LRU.cpp
+)
+
+add_library(LRU_lib STATIC ${LIB_SOURCES})
+message(${CMAKE_SOURCE_DIR}/include)
+target_include_directories(LRU_lib PUBLIC ${CMAKE_SOURCE_DIR}/include)

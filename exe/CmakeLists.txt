@@ -1,0 +1,10 @@
+project(LRU_app)
+
+set(EXE_SOURCES
+	main.cpp
+)
+
+add_executable(LRU ${EXE_SOURCES})
+
+target_link_libraries(LRU PRIVATE LRU_lib)
+# set_target_properties(LRU PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})

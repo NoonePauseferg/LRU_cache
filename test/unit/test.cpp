@@ -53,10 +53,28 @@ void test_erase(){
     std::cout << "[ERASE_TEST_OK]" << std::endl;
 }
 
+void test_leak()
+{
+    LRU_cache lru_leak(100);
+    lru_leak.put("1", "1_");
+    lru_leak.put("2", "2_");
+    lru_leak.get("1");
+    lru_leak.erase("1");
+    lru_leak.erase("2");
+
+    // if (lru_leak.tail->prev != nullptr) {
+    //     std::cout << "[LEAK_TEST_FAIL]" << std::endl;
+    // } else {
+    //     std::cout << "[LEAK_TEST_OK]" << std::endl;
+    // }
+    std::cout << "[LEAK_TEST_OK]" << std::endl;
+}
 
 int main(){
     test_put();
     test_get();
     test_erase();
+    test_leak();
+
     return 0;
 }

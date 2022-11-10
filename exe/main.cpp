@@ -8,4 +8,6 @@ int main(){
     lru.put("qewtyiqrqweirfgfhdv", "ksjdfguysfdctgcguydsguy_");
     lru.erase("qewtyiqrqweirfgfhdv");
     std::cout << lru.get("qewtyiqrqweirfgfhdv") << std::endl;
+
+    return 0;
 }

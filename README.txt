@@ -35,7 +35,26 @@
  #################################################################################################### 
 
  Сборка:
+ ------------
     mkdir tmp
     cd tmp
     cmake ..
     make
+    make LRU_test
+    make LRU
+
+------------
+
+Run unit tests:
+------------
+    ./test/unit/LRU_test
+------------
+
+Run интеграционные tests:
+------------
+    cd ..
+    ./test/integr/test.sh
+    
+    # (not working) .././test/integr/test.sh
+    # (Optional) Integration tests are run from the project's root directory
+------------

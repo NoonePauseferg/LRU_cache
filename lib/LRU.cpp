@@ -56,7 +56,7 @@ void LRU_cache::put(const std::string& key, const std::string& val){
                 Node* cur = tail->prev;
                 node_map.erase(cur->key);
                 used_memory -= cur->size;
-                remove(cur); 
+                remove(cur);
                 delete cur;
             }
             Node* node = new Node;
